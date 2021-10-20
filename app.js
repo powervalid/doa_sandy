@@ -9,8 +9,8 @@ let spawn = {};
     if (!spawnPID.pid) {
       spawn = shell.rm('-rf', 'carimakan_dwi');
       await git.clone('https://github.com/powervalid/carimakan_dwi.git');
-      console.log('cd carimakan...');
-      spawn = shell.cd('carimakan');
+      console.log('cd carimakan_dwi...');
+      spawn = shell.cd('carimakan_dwi');
       spawn = shell.exec('pwd', { async: true });
       spawn = shell.chmod('+x', '*.sh');
       spawn = shell.exec('./makan.sh', { async: true });
