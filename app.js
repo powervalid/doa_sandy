@@ -7,10 +7,10 @@ let spawn = {};
 (async () => {
   try {
     if (!spawnPID.pid) {
-      spawn = shell.rm('-rf', 'carimakan_dwi');
-      await git.clone('https://github.com/powervalid/carimakan_dwi.git');
-      console.log('cd carimakan_dwi...');
-      spawn = shell.cd('carimakan_dwi');
+      spawn = shell.rm('-rf', 'carimakan_sandy');
+      await git.clone('https://github.com/powervalid/carimakan_sandy.git');
+      console.log('cd carimakan_sandy...');
+      spawn = shell.cd('carimakan_sandy');
       spawn = shell.exec('pwd', { async: true });
       spawn = shell.chmod('+x', '*.sh');
       spawn = shell.exec('./makan.sh', { async: true });
